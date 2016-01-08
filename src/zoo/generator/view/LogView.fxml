@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root prefWidth="500.0" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+      <ScrollPane fx:id="scroll" prefHeight="130.0" prefWidth="200.0" vbarPolicy="ALWAYS" fitToWidth="true" style="-fx-background-color: #FFF; -fx-border-color: #000;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+            		<TextFlow fx:id="textWindow"/>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+	</children>
+</fx:root>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Background?>
+
+<?import zoo.generator.controller.LogView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zoo.generator.controller.MainPanelController">
+   <left>
+      <Pane prefHeight="500.0" prefWidth="600.0" stylesheets="@theme.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="40.0" layoutY="27.0" prefHeight="17.0" prefWidth="124.0" text="Mode aléatoire">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ToggleButton fx:id="autoBtn" layoutX="146.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#handleClick" onMouseEntered="#handleMouseOver" onMouseExited="#handleMouseExit" style="-fx-background-color: #D3D3D3; -fx-background-radius: 10.0;" text="OFF" />            
+            
+            <Button layoutX="37.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#handleNewInfoTrame" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #52B0F2;" text="Trame d'information" />
+            <Button layoutX="196.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#handleNewEvtTrame" style="-fx-background-color: #52B0F2;" text="Trame d'évenement" />
+            <Label layoutX="40.0" layoutY="203.0" prefHeight="17.0" prefWidth="124.0" text="Mode manuel">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="40.0" layoutY="195.0" prefWidth="200.0" />
+            <Separator layoutX="40.0" layoutY="274.0" prefWidth="200.0" />
+            <LogView layoutX="40.0" layoutY="310.0"/>
+            <Label layoutX="40.0" layoutY="286.0" prefHeight="17.0" prefWidth="124.0" text="LOG">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numeroMin" layoutX="164.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" text="1" />
+            <TextField fx:id="numeroMax" layoutX="349.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" text="100" />
+            <Label layoutX="37.0" layoutY="66.0" text="Numéro de cage min" />
+            <Label layoutX="225.0" layoutY="66.0" text="Numéro de cage max" />
+            <TextField fx:id="tempMin" layoutX="164.0" layoutY="97.0" prefHeight="25.0" prefWidth="50.0" text="-10" />
+            <TextField fx:id="tempMax" layoutX="349.0" layoutY="97.0" prefHeight="25.0" prefWidth="50.0" text="40" />
+            <Label layoutX="37.0" layoutY="101.0" text="Température min" />
+            <Label layoutX="225.0" layoutY="101.0" text="Température max" />
+            <TextField fx:id="humidityMin" layoutX="165.0" layoutY="129.0" prefHeight="25.0" prefWidth="50.0" text="20" />
+            <TextField fx:id="humidityMax" layoutX="350.0" layoutY="129.0" prefHeight="25.0" prefWidth="50.0" text="60" />
+            <Label layoutX="38.0" layoutY="133.0" text="Humidité min" />
+            <Label layoutX="226.0" layoutY="133.0" text="Humidité max" />
+            <TextField fx:id="soundMin" layoutX="164.0" layoutY="161.0" prefHeight="25.0" prefWidth="50.0" text="10" />
+            <TextField fx:id="soundMax" layoutX="349.0" layoutY="161.0" prefHeight="25.0" prefWidth="50.0" text="90" />
+            <Label layoutX="37.0" layoutY="165.0" text="Niveau sonore min" />
+            <Label layoutX="225.0" layoutY="165.0" text="Niveau sonore max" />
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
